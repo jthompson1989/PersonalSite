@@ -15,11 +15,18 @@
   <script src="js/site.js"></script>
   <style>
     .mySlides {display:none;}
+    .banner {
+        position: sticky;
+        top: 0;
+        padding: 10px 16px;
+        background: #555;
+        color: #f1f1f1;
+      }
     </style>
 </head>
 <body onload="loadSite();">
 
-<nav class="navbar navbar-default header">
+<nav class="navbar navbar-default header banner">
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" style="color: #1abc9c" href="#">ZombieChan's Site</a>
@@ -34,7 +41,8 @@
     <div class="col-sm-4">
       <p>My name is Joseph Thompson, I'm a software engineer in the Minneapolis/St.Paul metro area. 
         I've been working in the field since 2010, primarily working on dotNet Projects.</p>
-        <p>I also play around with Video Editing, Unity Development, Pixel Art, and creating Divinity OS mods on my spare time.</p>
+        <p>I also play around with Video Editing, Unity Development, <a href="https://www.redbubble.com/people/zombiechan51">Pixel Art</a>, 
+          and creating <a href="https://steamcommunity.com/id/zombieChan51/myworkshopfiles/?appid=435150">Divinity OS mods</a> on my spare time.</p>
     </div>
   </div>
   <div class="row">
@@ -108,6 +116,5 @@
     </div>
   </div>
 </footer>
-
 </body>
 </html>

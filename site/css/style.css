@@ -89,16 +89,29 @@
     margin-top: 6px; }
     
     .single ul {
-    margin-bottom: 0; }
+      margin-bottom: 0; 
+    }
     .single li a {
-    color: #ffffff;
-    font-size: 14px;
-    text-transform: uppercase;
-    border-bottom: 1px solid #f0f0f0;
-    line-height: 40px;
-    display: block;
-    text-decoration: none; }
+      color: #ffffff;
+      font-size: 14px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #f0f0f0;
+      line-height: 40px;
+      display: block;
+      text-decoration: none; 
+    }
     .single li a:hover {
-    color: #1abc9c; }
+      color: #1abc9c; 
+    }
     .single li:last-child a {
-    border-bottom: 0; }
+      border-bottom: 0; 
+    }
+
+    .mySlides {display:none;}
+    .banner {
+        position: sticky;
+        top: 0;
+        padding: 10px 16px;
+        background: #555;
+        color: #f1f1f1;
+      }

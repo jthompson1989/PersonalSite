@@ -1,24 +1,24 @@
-var slideIndex = 1;
+let slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
   slideIndex += n;
-  if (slideIndex > document.getElementsByClassName("mySlides").length) {slideIndex = 1}
-  if (slideIndex < 1) {slideIndex = document.getElementsByClassName("mySlides").length}
+  const slides = document.getElementsByClassName("mySlides");
+  if (slideIndex > slides.length) {slideIndex = 1}
+  if (slideIndex < 1) {slideIndex = slides.length}
   showDivs(slideIndex);
 }
 
 function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {n = 1}
-  if (n < 1) {n = x.length}
+  const slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {n = 1}
+  if (n < 1) {n = slides.length}
   slideIndex = n;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  if (slideIndex > 0 && slideIndex <= x.length) {
-    x[slideIndex-1].style.display = "block";
+  if (slideIndex > 0 && slideIndex <= slides.length) {
+    slides[slideIndex-1].style.display = "block";
   }
 }
 
@@ -40,8 +40,7 @@ function renderYear(spanId, date){
     document.getElementById(spanId).innerHTML = calculateYearsDifference(date);
 }
 
-
 function calculateYearsDifference(date) { 
-    var yearDiff = Date.now() - date;
-    return Math.abs(new Date(yearDiff).getUTCFullYear() - 1970);
-  }
+    const yearDiff = Date.now() - date.getTime();
+    return Math.floor(yearDiff / (1000 * 60 * 60 * 24 * 365.25));
+}

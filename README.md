@@ -15,22 +15,4 @@ This project is a personal website that will be hosted on Firebase. It showcases
 - **Frontend**: HTML, CSS, JavaScript
 - **Hosting**: Firebase Hosting
 
-### Setup Instructions
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/jthompson1989/PersonalSite.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd ZombieChan_PersonalSite
-    ```
-3. Install dependencies:
-    ```bash
-    npm install
-    ```
-4. Deploy to Firebase:
-    ```bash
-    firebase deploy
-    ```
 

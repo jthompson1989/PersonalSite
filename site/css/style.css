@@ -8,16 +8,19 @@
   }
   
   .header{
-    background-color:#3d3d3d;
-
+    background-color:#000000;
+    border-bottom: 2px solid #00ff41;
+    box-shadow: 0 0 10px #00ff41;
   }
 
 
 
   footer {
-    background-color: #555;
-    color: white;
+    background-color: #000000;
+    color: #00ff41;
     padding: 15px;
+    border-top: 2px solid #00ff41;
+    box-shadow: 0 0 10px #00ff41;
   }
   
   @media screen and (max-width: 767px) {
@@ -29,28 +32,34 @@
   }
 
   body {
-    font: 20px Montserrat, sans-serif;
+    font: 18px 'Courier New', 'Fira Code', 'Consolas', monospace;
     line-height: 1.8;
-    color: #f5f6f7;
-    background-color:#2f2f2f;
+    color: #00ff41;
+    background-color:#0a0a0a;
+    text-shadow: 0 0 5px #00ff41;
   }
-  p {font-size: 16px;}
+  p {
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+  }
   .margin {margin-bottom: 45px;}
   .bg-1 { 
-    background-color: #1abc9c; /* Green */
-    color: #ffffff;
+    background-color: #001a00; /* Dark Matrix Green */
+    color: #00ff41;
+    border: 1px solid #00ff41;
   }
   .bg-2 { 
-    background-color: #474e5d; /* Dark Blue */
-    color: #ffffff;
+    background-color: #0a0a0a; /* Terminal Black */
+    color: #00ff41;
   }
   .bg-3 { 
-    background-color: #ffffff; /* White */
-    color: #555555;
+    background-color: #001100; /* Dark Green */
+    color: #00ff41;
+    border: 2px solid #00ff41;
   }
   .bg-4 { 
-    background-color: #2f2f2f; /* Black Gray */
-    color: #fff;
+    background-color: #000000; /* Pure Black */
+    color: #00ff41;
   }
   .container-fluid {
     padding-top: 70px;
@@ -60,24 +69,53 @@
     padding-top: 15px;
     padding-bottom: 15px;
     border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
+    border-radius: 4px;
+    letter-spacing: 3px;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
   }
   .navbar-nav  li a:hover {
-    color: #1abc9c !important;
+    color: #00ff41 !important;
+    text-shadow: 0 0 10px #00ff41;
   }
 
-  .single {
-    padding: 30px 15px;
-    margin-top: 40px;
-    background: transparent;
-    border: 1px solid #f0f0f0; }
-    .single h3.side-title {
+  .navbar-logo {
+    height: 50px; 
+    width: 50px; 
+    border-radius: 50%; 
+    display: inline-block; 
+    vertical-align: middle; 
+    margin-right: 10px; 
+    object-fit: cover;
+  }
+  
+  .navbar-brand {
+    color: #00ff41 !important;
+    text-shadow:rgba(0, 255, 65, 0.03);
+  }
+
+  .brewery {
+    text-align: left;
+  }
+
+  .single h3.side-title {
     margin: 0;
     margin-bottom: 10px;
     padding: 0;
+    font-size: 20px;
+    color: #00ff41;
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 10px #00ff41;
+  }
+    .single h3.side-title:after {
+    content: '>';
+    width: 60px;
+    height: 1px;
+    display: block;
+    margin-top: 6px;
+    color: #00ff41;
+ 
     font-size: 20px;
     color: #ffffff;
     text-transform: uppercase; }
@@ -85,18 +123,89 @@
     content: '';
     width: 60px;
     height: 1px;
-    display: block;
-    margin-top: 6px; }
-    
-    .single ul {
-      margin-bottom: 0; 
-    }
-    .single li a {
-      color: #ffffff;
+    display: b00ff41;
       font-size: 14px;
-      text-transform: uppercase;
-      border-bottom: 1px solid #f0f0f0;
+      text-transform: none;
+      border-bottom: 1px solid #003300;
       line-height: 40px;
+      display: block;
+      text-decoration: none;
+      font-family: 'Courier New', monospace;
+      transition: all 0.3s ease;
+    }
+    .single li a:before {
+      content: '> ';
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .single li a:hover {
+      color: #00ff41;
+      text-shadow: 0 0 10px #00ff41;
+      padding-left: 10px;
+    }
+    .single li a:hover:before {
+      opacity: 100ff41;
+        z-index: 1000;
+        border-bottom: 2px solid #00ff41;
+      }
+      
+    /* Hacker-style headings */
+    h3 {
+      color: #00ff41;
+      font-family: 'Courier New', monospace;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px #00ff41;
+      letter-spacing: 2px;
+    }
+    
+    h3:before {
+      content: '# ';
+      color: #00ff41;
+    }
+    
+    /* Link styling */
+    a {
+      color: #00ff41;
+      transition: all 0.3s ease;
+    }
+    
+    a:hover {
+      color: #00ff41;
+      text-shadow: 0 0 15px #00ff41;
+      text-decoration: none;
+    }
+    
+    /* Button styling for carousel */
+    .w3-button {
+      font-family: 'Courier New', monospace;
+      border: 1px solid #00ff41;
+      transition: all 0.3s ease;
+    }
+    
+    .w3-button:hover {
+      background-color: #00ff41 !important;
+      color: #000 !important;
+      box-shadow: 0 0 20px #00ff41;
+    }
+    
+    /* Scan line effect */
+    body:after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 65, 0.03) 0px,
+        rgba(0, 255, 65, 0.03) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    line-height: 40px;
       display: block;
       text-decoration: none; 
     }
@@ -112,7 +221,7 @@
         position: sticky;
         top: 0;
         padding: 10px 16px;
-        background: #555;
+        background: #000;
         color: #f1f1f1;
         z-index: 1000;
       }
